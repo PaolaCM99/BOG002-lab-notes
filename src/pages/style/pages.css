@@ -1,0 +1,29 @@
+
+.NoFound{
+	position: absolute;
+	font-size: 4.5rem;
+	display: flex;
+	justify-content: center;
+	left: 30%;
+}
+.container-notes{
+	position: absolute;
+	top: 0;
+	background-color: rgb(240, 240, 240);
+	height: 100vh;
+	width: 100vw;
+	left: 0;
+}
+.menu{
+	background-color: rgb(32, 32, 32);
+	position: absolute;
+	height: 100vh;
+	width: 25vw;
+	left: 0%;
+	top: 0%;
+}
+.menu-opciones{
+	position: relative;
+	top:4em;
+	color: white;
+}

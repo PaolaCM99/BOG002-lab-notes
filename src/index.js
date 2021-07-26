@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// import Nav from './components/nav'
-import Vector from './components/vector'
-
+import App from './components/app'
+// import Register from './pages/register'; 
 const container= document.getElementById("root");
 
-ReactDOM.render(<Vector/>, container);
+ReactDOM.render( <App/>, container);
 
