@@ -1,9 +1,18 @@
-import React from 'react';
+
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/app'
-// import Register from './pages/register'; 
-const container= document.getElementById("root");
+import firebaseConfig from './firebase/config';
+import { FirebaseAppProvider } from 'reactfire';
 
-ReactDOM.render( <App/>, container);
+
+const container = document.getElementById("root");
+
+ReactDOM.render((
+	<FirebaseAppProvider firebaseConfig={firebaseConfig}>
+		<Suspense fallback={'Cargando...'}>
+			<App />
+		</Suspense>
+	</FirebaseAppProvider>), container);
 

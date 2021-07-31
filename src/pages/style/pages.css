@@ -24,6 +24,22 @@
 }
 .menu-opciones{
 	position: relative;
-	top:4em;
+	top:12vh;
+	display: flex;
 	color: white;
+	flex-direction: column;
+	align-content: space-between;
+	height: 70vh;
+}
+.menu-opciones > li{
+	margin-top: 2em;
+	display: flex;
+	align-items: center;
+	height: 10vh;
+	position: relative;
+	left: -1em;
+}
+.menu-opciones>li>button{
+	background-color: #7e2ae6 ;
+	border-radius: 10px;
 }

@@ -4,26 +4,21 @@
 	list-style: none;
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-
+.btn-primary{
+    background-color: #7e2ae6 !important;
+}
 
 .nav {
-	display: grid;
 	position:fixed;
-	z-index: 2;
-	grid-template-rows: 0.3fr;
-	grid-template-columns: 1fr 8fr 2fr 2fr 0.5fr;
-	grid-template-areas:
-		"logo . login login .";
 	background-color: black;
-	grid-gap: 3px;
 	align-items: baseline;
-	width: 100%;
+	width: 100vw;
 	left: 0px;
 	top: 0px;
+	z-index: 2;
 }
 
 .logo {
-	grid-area: logo;
 	padding-left: 3em;
 	color: white;
 	height: 38px;
@@ -31,7 +26,6 @@
 }
 
 .img {
-	grid-area: logo;
 	position: absolute;
 	display: inline-flex;
 	align-items: baseline;
@@ -46,18 +40,20 @@
 }
 
 .lista {
-	grid-area: login;
+	left: 60%;
+	margin-top: 1em;
 	display: inline-flex;
+	position: relative;
 	color: white;
 	justify-content: space-evenly;
+	width: 25vw;
 }
-
 .signup {
 	background-color: #5F40DE;
 	border-radius: 15px;
 	padding: 0.2em 0.2em 0.4em 0.4em;
 }
-.signup>a{
+.signup >a{
 	color: white;
 }
 .vector {
@@ -86,29 +82,20 @@
 	width: 20vw;
 }
 
-@media (orientation: portrait) {
-	.nav {
-		display: grid;
-		grid-template-rows: 0.3fr;
-		grid-template-columns: 1fr 4fr 3fr 3fr 0.5fr;
-		grid-template-areas:
-			"logo . login login .";
-		background-color: black;
-		position: absolute;
-		grid-gap: 3px;
-		align-items: baseline;
-		width: 100%;
-		left: 0px;
-		top: 0px;
-	}
-}
 
 .form {
 	position: relative;
-	top: 4em;
+	top: 5em;
 	height: auto;
 	display: flex;
 	justify-content: center;
+	flex-direction: column;
+	z-index: 3;
+}
+.form-login {
+	position: relative;
+	height: auto;
+	display: flex;
 	flex-direction: column;
 	z-index: 3;
 }
@@ -128,9 +115,17 @@ input {
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	border-radius: 10px;
 }
+.input-login {
+	height: 6vh;
+	width: 34vw;
+	border: 1px solid #BBB5B5;
+	box-sizing: border-box;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+}
 button {
 	background: #000000;
-	border-radius: 10px;
+	border-radius: 15px;
 	height: 6vh;
 	width: 40vw;
 	color: white;
@@ -138,4 +133,10 @@ button {
 .prompt{
 	color: rgb(255, 0, 0);
 	display: none;
+}
+.modal-body{
+	height: 50vh;
+}
+@media (orientation: portrait) {
+	
 }

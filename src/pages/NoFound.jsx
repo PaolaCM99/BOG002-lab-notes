@@ -6,7 +6,7 @@ function NoFound(){
 	 
 	 <h1 className="NoFound">
 		 404: Not found
-		 <img src={Error404}/>
+		 <img alt="Error 404"src={Error404}/>
 	 </h1>
  )
 }
