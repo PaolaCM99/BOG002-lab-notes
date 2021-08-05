@@ -4,12 +4,15 @@ import { useState } from 'react'
 import 'firebase/auth';
 import { useFirebaseApp} from 'reactfire';
 import { useHistory } from 'react-router-dom';
+import {  Alert } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.css";
 
 function Register(props) {
 
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 	const [user, setUser] = useState("");
+	const [error, setError] = useState("")
 
 	const firebase = useFirebaseApp()
 	const history = useHistory();
@@ -20,14 +23,15 @@ function Register(props) {
 				history.push("/feed");
 				return credential.user.updateProfile({ displayName: user })
 			})
-			.catch((e) => console.log(e.code))
+			.catch((e) => setError(e.message))
 	}
 
 	return (
 
 		<div className="form">
+			{error && <Alert  variant="danger" >{error}</Alert>}
 			<h1 className="titulo_registro"> Crear una cuenta</h1>
-
+			
 			<div className="form-group">
 				<label htmlFor="user"> Nombre de usuario <br />
 					<input type="text" name="user" onChange={(e) => setUser(e.target.value)}/> <br />

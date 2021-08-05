@@ -2,23 +2,24 @@ import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from '../pages/home.jsx'
 import Register from '../pages/register.jsx'
-import Feed from '../pages/notes'
+import Feed from '../pages/feed'
 import Layout from './layout.js';
 import NoFound from '../pages/NoFound.jsx';
-import Login from '../pages/login.jsx';
+import 'firebase/auth';
 
 
-function App() {	
+function App() {
+
+
 	return (
 		<Router>
 			<Layout>
-			<Switch >
-				<Route exact path='/' component={Home}/> 
-					<Route path="/register" component={Register}/>
+				<Switch >
+					<Route exact path='/' component={Home} />
+					<Route path="/register" component={Register} />
 					<Route path="/feed" component={Feed} />
-					<Route path="/login" component={Login} />
 					<Route component={NoFound} />
-			</Switch>
+				</Switch>
 			</Layout>
 		</Router>
 	);

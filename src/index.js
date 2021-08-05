@@ -6,13 +6,12 @@ import App from './components/app'
 import firebaseConfig from './firebase/config';
 import { FirebaseAppProvider } from 'reactfire';
 
-
 const container = document.getElementById("root");
 
 ReactDOM.render((
 	<FirebaseAppProvider firebaseConfig={firebaseConfig}>
 		<Suspense fallback={'Cargando...'}>
-			<App />
+				<App />
 		</Suspense>
 	</FirebaseAppProvider>), container);
 
