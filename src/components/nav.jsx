@@ -10,11 +10,20 @@ import { useFirebaseApp} from 'reactfire';
 function Nav() {
 
 	const [show, setShow] = useState(false);
+	const [user, setUser] = useState(false)
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
 	const firebase = useFirebaseApp()
-	const logeado= firebase.auth().currentUser
-
+	firebase.auth().onAuthStateChanged((user) => {
+		if (user) {
+		  setUser(true)
+		//   var uid = user.uid;
+		//   // ...
+		} else{
+			setUser(false)
+		}
+	  });
+	  console.log(user)
 	return (
 		<nav className="nav">
 			<Link to="/">
@@ -24,7 +33,7 @@ function Nav() {
 					<span className="notes"> NOTES</span>
 				</div>
 			</Link>
-			{ !logeado &&
+			{ !user &&
 			<ul className="lista">
 				 <li className="login" onClick={handleShow}> Iniciar sesion</li>
 						<Modal show={show} onHide={handleClose}>

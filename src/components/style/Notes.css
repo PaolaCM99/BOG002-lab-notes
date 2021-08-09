@@ -2,7 +2,9 @@
 	display: grid;
 	grid-gap: 1rem;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 0.1fr));
-	background-color: burlywood;
+	grid-template-rows: repeat(auto-fit, minmax(300px, 0.01fr));
+	height: 100vh;
+	overflow-y: scroll;
 }
 
 .note {
@@ -23,22 +25,32 @@
 /* .note:hover {
 	height: 230px;
 } */
-.header-note{
-	cursor: pointer;
-	display: flex;
-}
+
 
 .titulo-nota {
-	position:fixed;
+	/* position:fixed; */
 	width: 24vw;
-	height: auto;
+	height: 7vh;
 	color: white;
 	border: none;
 	box-shadow: none;
+	/* background-color: cadetblue; */
 	outline: none;
 	border-radius: 0%;
 	border-bottom: gray 1px solid;
+	justify-content: space-evenly;
+    display: flex;
 }
+.titulo-nota >h5{
+	display: flex;
+	justify-content: flex-start;
+}
+.titulo-nota >button{
+	display: flex;
+	justify-content: flex-end;
+
+}
+
 .title-form-note{
 	position:relative;
 	width: 25vw;
@@ -49,8 +61,7 @@
 	resize: none;
 	height: auto;
 	position: relative;
-	top: 8vh;
-	background-color: rgba(0, 0, 139, 0.301);
+	/* background-color: rgba(0, 0, 139, 0.301); */
 }
 
 .fecha-nota {
@@ -96,8 +107,14 @@
 	background-color: blueviolet;
 }
 .borrar{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	border: none;
 	cursor: pointer;
 	width: 35px;
 	height: 35px;
-	background-color: rgb(150, 0, 0);
+	font-size: 30px;
+	background-color: transparent;
+	/* background-color: rgb(150, 0, 0); */
 }
