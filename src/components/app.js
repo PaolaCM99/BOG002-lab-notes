@@ -1,4 +1,5 @@
 import React from 'react'
+// import { useFirebaseApp } from 'reactfire';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from '../pages/home.jsx'
 import Register from '../pages/register.jsx'
@@ -7,9 +8,28 @@ import Layout from './layout.js';
 import NoFound from '../pages/NoFound.jsx';
 import 'firebase/auth';
 
+// , withRouter
 
-function App() {
+function App(props) {
+	// const history = useHistory()
+	// const firebase = useFirebaseApp();
+	// const [user, setUser] = useState(null)
 
+	// useEffect(()=>{
+	// 	if(firebase.auth().currentUser){
+	// 		console.log("existe usuario", firebase.auth().currentUser)
+	// 		setUser(firebase.auth().currentUser)
+	// 	}
+	// 	else{
+	// 		console.log("si existe")
+	// 		props.history.push('./')
+	// 	}
+	// }, [props.history])
+	// firebase.auth().onAuthStateChanged((user) => {
+	// 	if (!user) {
+	// 		history.push('./')
+	// 	}
+	// })
 
 	return (
 		<Router>

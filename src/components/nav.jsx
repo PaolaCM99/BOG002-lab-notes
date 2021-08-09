@@ -39,7 +39,6 @@ function Nav() {
 				<li className="signup" > <Link to="/register">Registrarme</Link></li>
 			</ul>}
 		</nav>
-
 	)
 }
 

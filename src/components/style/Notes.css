@@ -1,47 +1,103 @@
-.note-list{
+.note-list {
 	display: grid;
-	grid-gap:1rem;
+	grid-gap: 1rem;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 0.1fr));
+	background-color: burlywood;
 }
-.note{
-	padding: 1em;
+
+.note {
+	padding: 0.8em;
 	color: white;
 	background-color: #171717;
 	max-width: 320px;
-	/* min-height: 230px; */
 	display: flex;
 	flex-direction: column;
 	border-radius: 10px;
-	box-shadow: 0px 10px 13px -7px #000000, -7px -8px 50px -30px rgba(0,0,0,0);
+	box-shadow: 0px 10px 13px -7px #000000, -7px -8px 50px -30px rgba(0, 0, 0, 0);
 	height: 60px;
-	transition: height 0.5s;
+	height: 230px;
+	/* transition: height 0.5s; */
 	overflow: hidden;
 }
 
-.note:hover {
-  height: 230px;
+/* .note:hover {
+	height: 230px;
+} */
+.header-note{
+	cursor: pointer;
+	display: flex;
 }
-.titulo-nota{
-	width: 20vw;
-	background-color: transparent;
+
+.titulo-nota {
+	position:fixed;
+	width: 24vw;
+	height: auto;
 	color: white;
 	border: none;
 	box-shadow: none;
 	outline: none;
+	border-radius: 0%;
+	border-bottom: gray 1px solid;
 }
-.descripcion-nota{
-	background-color: transparent;
+.title-form-note{
+	position:relative;
+	width: 25vw;
+}
+
+.descripcion-nota {
 	color: white;
 	resize: none;
-	height: 25vh;
+	height: auto;
+	position: relative;
+	top: 8vh;
+	background-color: rgba(0, 0, 139, 0.301);
 }
-.fecha-nota{
+
+.fecha-nota {
 	justify-content: flex-end;
 	display: flex;
 }
-.submit{
-	border-radius: 100%;
-	height: 20px;
-	width: 20px;
+
+.form-notes {
+	display: flex;
+	align-content: space-around;
+	height: 230px;
+}
+
+.description-note {
+	align-self: center;
+	position: relative;
+	display: flex;
+	background-color: transparent;
+	align-content: space-around;
+	color: white;
+	height: 120px;
+	width: 270px;
+	resize: none;
+	padding: 0.5em;
+	border: none;
+
+}
+
+.description-note:focus {
+	outline: none;
+}
+.submit {
+	display: flex;
+	justify-content: space-around;
+	align-content: center;
+	margin-top: 0.5em;
+	color: white;
+	display: flex;
+	border-radius: 10px;
+	border: none;
+	width: 19vw;
+	height: 5vh;
 	background-color: blueviolet;
+}
+.borrar{
+	cursor: pointer;
+	width: 35px;
+	height: 35px;
+	background-color: rgb(150, 0, 0);
 }
