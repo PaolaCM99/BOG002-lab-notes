@@ -9,21 +9,17 @@ import { useFirebaseApp} from 'reactfire';
 
 function Nav() {
 
+	const firebase = useFirebaseApp()
 	const [show, setShow] = useState(false);
 	const [user, setUser] = useState(false)
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
-	const firebase = useFirebaseApp()
+	
+//condicionando componentes del nav
 	firebase.auth().onAuthStateChanged((user) => {
-		if (user) {
-		  setUser(true)
-		//   var uid = user.uid;
-		//   // ...
-		} else{
-			setUser(false)
-		}
+		user? setUser(true):setUser(false)
 	  });
-	  console.log(user)
+
 	return (
 		<nav className="nav">
 			<Link to="/">
@@ -52,13 +48,3 @@ function Nav() {
 }
 
 export default Nav
-
-
-
-
-
-// { if(!exist.user) {<ul className="lista">
-
-// <li className="login"> Iniciar sesion</li>
-// <li className="signup"> Registrarme</li>
-// </ul>}}

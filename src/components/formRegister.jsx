@@ -49,9 +49,8 @@ function Register(props) {
 				<span className="prompt"> Contraseña no valida.</span></label>
 			</div>
 			
-
 			<div className="form-group">
-				<button type="submit" onClick={handleSignup}>Registrarme</button>
+				<button type="submit" className="btn-register" onClick={handleSignup}>Registrarme</button>
 			</div>
 
 		</div>

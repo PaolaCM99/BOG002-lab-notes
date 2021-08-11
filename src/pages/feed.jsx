@@ -10,6 +10,7 @@ function Feed() {
 	const history = useHistory()
 	const firebase = useFirebaseApp();
 	const [nameUser, setNameUser] = useState("")
+	const [uid, setUid] = useState("")
 	const handleCreatedNote = () => console.log("deberia mostrar el form de la nota", //{style={ display:block}}
 	);
 
@@ -19,11 +20,13 @@ function Feed() {
 				history.push('./')
 			})
 	}
-	firebase.auth().onAuthStateChanged((user) => {
+	 firebase.auth().onAuthStateChanged((user) => {
 			if (!user) {
-				history.push('./')
+				history.push('/')
+			} else{
+				setNameUser(user.displayName)
+				setUid(user.uid)
 			}
-			setNameUser(user.displayName)
 		})
 		 
 	return (
@@ -32,11 +35,12 @@ function Feed() {
 					<ul className="menu-opciones">
 						<li> <h2> {nameUser}</h2> </li>
 						<li> <button onClick={handleCreatedNote}> <i className="fas fa-plus"> </i> Añadir nota</button></li>
-						<li> <button  > Cancelar</button></li>
+						<li> <button> Cancelar</button></li>
 						<li> <button onClick={handleLogout}> Cerrar sesion</button> </li>
 					</ul>
 				</div>
-				<NotesList />
+				<NotesList
+				uid={uid} />
 			</section>
 	);
 }
