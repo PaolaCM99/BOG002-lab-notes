@@ -1,19 +1,20 @@
 /* /Barra de navegacion de la pagina */
 * {
-	text-decoration: none ;
+	text-decoration: none;
 	list-style: none;
 	overflow: hidden;
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-.btn-primary{
-    background-color: #7e2ae6 !important;
+
+.btn-primary {
+	background-color: #7e2ae6 !important;
 	position: relative;
 	top: 1.5em;
 	width: 34vw;
 }
 
 .nav {
-	position:fixed;
+	position: fixed;
 	background-color: black;
 	display: flex;
 	align-items: baseline;
@@ -31,9 +32,11 @@
 	height: 38px;
 	display: flex;
 }
-.nav>a{
-	text-decoration: none ;
+
+.nav>a {
+	text-decoration: none;
 }
+
 .img {
 	position: absolute;
 	display: inline-flex;
@@ -57,15 +60,18 @@
 	justify-content: space-evenly;
 	width: 25vw;
 }
+
 .signup {
 	background-color: #5F40DE;
 	border-radius: 15px;
 	padding: 0.2em 0.2em 0.4em 0.4em;
 }
-.signup >a{
+
+.signup>a {
 	color: white;
-	text-decoration: none ;
+	text-decoration: none;
 }
+
 .vector {
 	position: absolute;
 	bottom: 0;
@@ -105,9 +111,10 @@
 	justify-self: center;
 	z-index: 12;
 }
+
 .form-login {
 	position: relative;
-	min-height: 45vh;
+	min-height: 30vh;
 	height: auto;
 	display: flex;
 	flex-direction: column;
@@ -131,18 +138,21 @@ input {
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	border-radius: 10px;
 }
+
 .blue-input:focus {
 	background-color: transparent;
-	
-  }
+
+}
+
 .input-login {
 	height: 6vh;
-	width: 34vw;
+	width: 31vw;
 	border: 1px solid #BBB5B5;
 	box-sizing: border-box;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	border-radius: 10px;
 }
+
 button {
 	background: #000000;
 	border-radius: 15px;
@@ -150,20 +160,41 @@ button {
 	width: 40vw;
 	color: white;
 }
-.prompt{
+
+.prompt {
 	color: rgb(255, 0, 0);
 	display: none;
 }
 
-.modal-body{
-	max-height: 95vh;;
-	display: flex; justify-content: center;
-
+.modal-body {
+	height: 50vh;
+	display: flex;
+	justify-content: center;
 }
-.btn-register{
+
+.btn-register {
 	border: none;
 	border-radius: 10px;
 }
-@media (orientation: portrait) {
-	
+
+@media (max-width: 800px) {
+	.nav>ul {
+		position: relative;
+		left: 14em;
+		width: 40vw;
+		align-items: baseline;
+		display: flex;
+	}
+
+	.signup {
+		width: 35vw;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 5vh;
+	}
+
+	.login {
+		width: 35vw;
+	}
 }

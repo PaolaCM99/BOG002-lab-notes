@@ -1,4 +1,4 @@
-.container-notes {
+@media (min-width: 600px) {.container-notes {
 	display: grid;
 	grid-gap: 0.4em;
 	grid-template-columns: 25vw 74vw;
@@ -55,4 +55,16 @@
 	display: flex;
 	justify-content: center;
 	left: 30%;
+}}
+@media (max-width: 800px) { 
+	.container-notes{
+		grid-template-columns: 35vw 64vw;
+	}
+	.menu{
+		width: 35vw;
+	}
+	.menu-opciones>li {
+		height: 40px;
+		border-radius: 10px;
+	}
 }

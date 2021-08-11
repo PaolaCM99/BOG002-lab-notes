@@ -54,7 +54,7 @@
 .descripcion-nota {
 	color: white;
 	resize: none;
-	min-height: 20vh;
+	min-height: 140px;
 	position: relative;
 	overflow-y: auto;
 }
@@ -122,3 +122,14 @@
 	justify-content: space-between;
 
 }
+
+@media (min-width: 700px) { 
+	.note-list{
+		margin-top: 2em;
+		margin-bottom: 3em;
+	}
+	.titulo-nota{
+		height: 42px;
+	}
+	
+ }

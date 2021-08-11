@@ -32,7 +32,7 @@ function Nav() {
 			{ !user &&
 			<ul className="lista">
 				 <li className="login" onClick={handleShow}> Iniciar sesion</li>
-						<Modal show={show} onHide={handleClose}>
+						<Modal  show={show} onHide={handleClose}>
 							<Modal.Header closeButton>
 								<Modal.Title>Iniciar sesion</Modal.Title>
 							</Modal.Header>
